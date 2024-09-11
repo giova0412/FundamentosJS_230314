@@ -5,6 +5,13 @@ previo a iniciar el desarrollo de sotfware para web usando el framework de NodeJ
 un par de practicas de repaso en JavaScript puro, con el objetivo de confirmar los conocimientos 
 basicos de logica de programacion.
 
+## Historial de Practicas 
+
+|No.|Descripcion|Estatus|
+|--|--|--| 
+|1.|Metodologia de Evaluacion|Activa|
+|2.|Inicializacion de proyecto de fundamentos de JS|Activa|
+
 
 
 ### Autor
