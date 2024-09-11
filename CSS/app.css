@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.58;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Lucida Sans';
+    background-color: cornflowerblue;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+header{
+    padding: 3rem 0;
+}
+header h1{
+    text-align: center;
+    color: aliceblue;
+    font-size: 6rem;
+}
+header p{
+    color: gold;
+    text-align: center;
+    font-size: 3.2rem;
+}
+header p a{
+    text-decoration: none;
+color: cyan;
+}
+.dom {
+    max-width: 120 rem;
+    margin: 0 auto;
+}
+.dom h2{
+    color: white;
+    text-align: center;
+}
+.dom nav a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+}
