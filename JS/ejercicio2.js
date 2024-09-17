@@ -57,7 +57,11 @@ let producto='monitor 20 pulgados'
  //console.log(typeof numero)
  //console.log (typeof numero2)
 
- //const numeroGrande= BigInt(1000000000)
+
+ // dato bigint
+
+
+ //const numeroGrande= BigInt(10000000001115155)
  //console.log(typeof numeroGrande )
  //const numero = 10
  //const numero2= 20
@@ -69,6 +73,8 @@ let producto='monitor 20 pulgados'
 //const numero2 = 30
 //console.log(typeofstring(numero2))
 //console.log(typeof Numbernumero)
+
+// symbol
 
 
 //const primerSymbol = Symbol(30)
