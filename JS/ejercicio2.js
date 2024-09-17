@@ -45,3 +45,39 @@ console.log(`tu nuevo saldo es de:${saldo_cuenta}`);
 //el cilente realiza un abono de 1500
 saldo_cuenta=
 console.log(`despues del abono ,tu saldo es de :${saldo_cuenta}`);
+
+// strings o cadenas de texto
+const alumno="Giovany Raul pazos cruz"
+let producto='monitor 20 pulgados'
+
+//const numero="30"
+//const numero2= 30
+
+
+ //console.log(typeof numero)
+ //console.log (typeof numero2)
+
+ //const numeroGrande= BigInt(1000000000)
+ //console.log(typeof numeroGrande )
+ //const numero = 10
+ //const numero2= 20
+ //console.log (numero + Number(numeroGrande))
+
+
+
+//const numero = "30"
+//const numero2 = 30
+//console.log(typeofstring(numero2))
+//console.log(typeof Numbernumero)
+
+
+//const primerSymbol = Symbol(30)
+//const segundoSymbol = Symbol(30)
+//console.log(primerSymbol===segundoSymbol)
+//console.log(primerSymbol.valueOf())
+
+  //ejercicio4
+
+//null
+const descuento=null
+ console.log(typeof descuento)

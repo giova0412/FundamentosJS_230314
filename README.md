@@ -11,7 +11,8 @@ basicos de logica de programacion.
 |--|--|--| 
 |1.|Metodologia de Evaluacion|Activa|
 |2.|Inicializacion de proyecto de fundamentos de JS|Activa|
-
+|3.|Declaracion de variables |Activa|
+|4.|Introduccion a Objetos|Activa
 
 
 ### Autor

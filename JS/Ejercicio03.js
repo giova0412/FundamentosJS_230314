@@ -1,35 +1,32 @@
-// strings o cadenas de texto
-//const alumno="juan"
-//let producto='monitor 20 pulgados'
-
-//const numero="30"
-//const numero2= 30
 
 
- //console.log(typeof numero)
- //console.log (typeof numero2)
+/// objetos
+const nombre="tablet"
+const precio =300
+const disponible=true
 
- //const numeroGrande= BigInt(1000000000)
- //console.log(typeof numeroGrande )
- //const numero = 10
- //const numero2= 20
- //console.log (numero + Number(numeroGrande))
+const producto1 = {
+    nombre: "tablet",
+    precio:300,
+    disponible:true
+}
+ console.log(producto)
+ console.log(producto)
 
-
-
-//const numero = "30"
-//const numero2 = 30
-//console.log(typeofstring(numero2))
-//console.log(typeof Numbernumero)
-
-
-//const primerSymbol = Symbol(30)
-//const segundoSymbol = Symbol(30)
-//console.log(primerSymbol===segundoSymbol)
-//console.log(primerSymbol.valueOf())
+ console.log(producto.nombre)
+ console.log(producto.precio)
+ console.log(producto.disponible)
 
 
-//null
-const descuento=null
- console.log(typeof descuento)
-
+ const { nombre2 , precio2 , disponible2 }=producto
+ console.log(nombre2)
+ console.log(precio2)
+ console.log(disponible)
+//objeto literal 
+const autenticado=true 
+const usuario ="giovany"
+const nuevoObjeto={
+    autenticado: autenticado,
+    usuario: usuario
+}
+console.table(nuevoObjeto)
