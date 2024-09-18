@@ -1,89 +1,218 @@
-// tipos de datos
-//1.undefined
+// Tipos de Datos en JS
 
+// 1. Undefined
 let cliente;
-console.log('el cliente es:$(cliente');
-console.log('el tipo de dato de la variable cliente es :$(typeof(cliente))');
+console.log(`El cliente es: ${cliente}`);
+console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
+cliente = "giovany pazos"
+console.log(`El cliente es: ${cliente}`);
+console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
+cliente = 19227
+console.log(`El cliente es: ${cliente}`);
+console.log(`El tipo de dato de la variable cliente es: ${typeof(cliente)}`);
 
-cliente="giovany"
-console.log('el tipo de dato  de clientes es ',typeof(cliente));
-cliente="230314"
-console.log('el tipo de la varible  de clientes es ',typeof(cliente));
+// Undefined es el tipo de dato que por defecto se asigna a variables no inicializadas o no declaradas
 
-//2. boolean
-console.warn("---Tipo de dato dato :BOOLEAN (booleano -true /false ");
-let esPremium="no lo se ";
-console.log (`el tipo de dato de la variable espremium es :${typeof(esPremium)}`);
-console.log(`el cliente es premium:${esPremium}`);
-console.log('asignando el valor true de la variable ');
-esPremium=true
-console.log (`el tipo de dato de la variable espremium es ${typeof(esPremium)}`);
+// 2. Boolean
+console.warn("--- Tipo de Dato: BOOLEAN (Boleano - True/False)")
+let esPremium = "No lo sé";
+console.log(`¿Es el cliente premium? : ${esPremium} `);
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+console.log(`Asignando el valor "true" a la variable`);
+esPremium = "true";
+console.log(`¿Es el cliente premium? : ${esPremium} `);
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+console.log("Asignando el valor true a la variable");
+esPremium = true;
+console.log(`¿Es el cliente premium? : ${esPremium} `);
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+console.log("Asignando el valor false a la variable");
+esPremium = false;
+console.log(`¿Es el cliente premium? : ${esPremium} `);
+console.log(`El tipo de dato de la variable esPremium es: ${typeof(esPremium)}`);
+if (esPremium) {
+    console.log("El cliente pago por usar el servicio");
+} else {
+    console.log("El cliente recibe los servicios gratuitos")
+}
 
-console.log("el cliente es premium:");
-console.log("cambaindo el valor de esPremiun a false ");
-esPremium=false
+// 3. Number
 
-if(esPremium)
-    console.log("el cliente pago por usar el srvicio");
-else
-console.log("el cliente que recibe los servicios gratuitos");
-
-//3.number
 var cantidad;
-const costo_producto=10.50;
-let saldo_cuenta =-2500.40
+const costo_producto = 10.50
+let saldo_cuenta = -2500.40
 let monto_transaccion;
-console.warn("---tipo de dato number");
-console.log(`tu saldo al dia de hoy es ${saldo_cuenta},(tipo de dato=${typeof(saldo_cuenta)})`);
-console.log(`el producto que has seleccionado cuesta:${costo_producto}`);
+
+console.warn("--- Tipo de Dato - NUMBER (Números, positivos, negativos, decimales, flotantes)");
+console.log(`Tu saldo al día de hoy es de: ${saldo_cuenta}, (Tipo de Dato = ${typeof(saldo_cuenta)})`);
+console.log(`El producto que has seleccionado cuesta: ${costo_producto}, (Tipo de Dato = ${typeof(costo_producto)})`);
 cantidad=8;
-console.log(`has elegido comprar ${cantidad}de productos`);
-console.log(`el importe total de la compra es ${(cantidad *costo_producto)}`);
-saldo_cuenta=saldo_cuenta -(cantidad *costo_producto);
-console.log(`tu nuevo saldo es de:${saldo_cuenta}`);
+console.log(`Has elegido comprar: ${cantidad} de productos`);
+console.log(`El importe total de la compra es: ${cantidad*costo_producto}`);
+saldo_cuenta=saldo_cuenta - (cantidad*costo_producto);
+console.log(`Tu nuevo saldo es de: ${saldo_cuenta}`)
+// El cliente realiza un abono de 1500 
+monto_transaccion = 1500;
+console.log(`Tu abono de: ${monto_transaccion} ha sido recibido, tu nuevo saldo es de: ${saldo_cuenta+monto_transaccion}`);
 
-//el cilente realiza un abono de 1500
-saldo_cuenta=
-console.log(`despues del abono ,tu saldo es de :${saldo_cuenta}`);
+// 4. Strings o Cadenas de Texto
+const alumno = "Giovany raul pazos cruz";
+let producto;
 
-// strings o cadenas de texto
-const alumno="Giovany Raul pazos cruz"
-let producto='monitor 20 pulgados'
+console.warn("--- Tipo de Dato - STRING (Cadena de Caractéres");
+console.log(`El nombre del alumno es: ${alumno}, que es un tipo de dato ${typeof(alumno)}`);
+producto = "MONITOR 20\"";
+console.log(`El nombre del producto es: ${producto}, que es un tipo de dato ${typeof(producto)}`);
 
-//const numero="30"
-//const numero2= 30
+// Manipulando los STRINGS
+console.log(`Más adelante podremos transformar el contenido de los STRINGS usando funciones específicas como convertir a mayúsculas: ${alumno} => ${alumno.toUpperCase()}`);
+console.log(`O en su defecto a minúsculas: ${producto} => ${producto.toLowerCase()}`);
+
+let numero = "30";
+let numero2 = 30;
+
+console.log(typeof numero);
+console.log(typeof numero2);
+
+// 5. BigInt (Enteros de Dimensiones Amplias) - Generalmente utilizado en sistemas matemáticos, físicos o espaciales donde se requiere de una excelente precisión numérica.
+console.warn("--- Tipo de Dato - BIGINT (Número Amplio)")
+const numeroGrande = 1234567890
+const numeroGrande2 = 12345678901234567890;
+let numeroGrande3 = 12345678901234567890123456789;
+let numeroGrande4 = 1234567890123456789012345678901234567890;
+console.log(`El primero experimento de un número grande es: ${numeroGrande}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande2}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande2)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande3}, que si es soportado por NUMBER, y su tipo de dato es: ${typeof(numeroGrande3)}`);
+console.log(`El primero experimento de un número grande es: ${numeroGrande4}, que ya no es soportado por NUMBER perdiendo precisión, y su tipo de dato es: ${typeof(numeroGrande4)}`);
+
+//Para definir el tipo de dato BigInt debemos invocar la función BigInt o usar la letra "n" al final del número en la asignación de valor
+console.log("Declaramos los valores númericos gran tamaño...")
+numeroGrande3 = BigInt(12345678901234567890123456789);
+numeroGrande4 = 123456789012345678901234567891234567890n;
+
+console.log(`El segundo experimento de un numero grande es: ${numeroGrande3}, y su tipo de dato es: ${typeof(numeroGrande3)}`)  
+console.log(`El segundo experimento de un numero grande es: ${numeroGrande4}, y su tipo de dato es: ${typeof(numeroGrande4)}`)
+// Hay que considerar que los tipos de datos declarados como BigInt no son operables con los de tipo number
 
 
- //console.log(typeof numero)
- //console.log (typeof numero2)
+let numero1 = 238;
+console.log(typeof numeroGrande);
+
+// Si intentamos  realizar una operación matemática entre estos dos tipos de datos, obtenderemos un error crítico de operación
+
+console.log(`El resultado de la operación de: numeroGrande4/numero1 es = a: ${numeroGrande4/BigInt(numero1)}`);
+
+// const numero3 = 10;
+// const numero4 = 20;
+
+// console.log(numero3+Number(numeroGrande));
+
+// const numero5 = "30";
+// const numero6= 30
+// console.log(typeof String(numero2));
+// console.log(typeof Numbernumero);
+
+// 6. Symbol
+console.warn("--- Tipo de Dato - SYMBOL (Simbolo o Forzar la Unicidad)")
+// VID APUNTES
+// const primerSymbol = Symbol(30);
+// const segundoSymbol= Symbol(30);
+
+// console.log(primerSymbol===segundoSymbol);
+// console.log(primerSymbol.valueOf());
+// console.log(segundoSymbol.valueOf());
+
+// Marco APUNTES
+
+// Declaramos diferentes variables con valores similares o iguales?
+const numero3 = 2;
+const numero4 = 2.0;
+const numero5 = "2";
+const numero6 = "2.0";
+const numero7 = Symbol(2);
+const numero8 = Symbol(2.0);
+const numero9 = Symbol("2");
+const numero10 = Symbol(2);
+// Prueba de comparación 1: ¿Es 2 = 2.0?
+console.log("Prueba de comparación 1:");
+if(numero3 == numero4){
+    console.log(`Se han comparado los valores de numero3 y numero4, confirmando que tienen el mismo valor.`)
+} else {
+    console.log(`Se han comparado los valores de numero3 y numero4, detectando que NO tienen el mismo valor.`)
+}
+
+// Prueba de comparación 2: ¿Es 2 = "2"?
+console.log("Prueba de comparación 2:");
+if(numero3 == numero5)
+    console.log(`Se han comparado los valores de numero3 y numero5, confirmando que tienen el mismo valor.`)
+ else 
+    console.log(`Se han comparado los valores de numero3 y numero5, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 3: ¿Es 2 estrictamente = "2"?
+/* 
+= Es asignación 
+== Igualdad de valor
+=== Igualdad estricta (compara valor y tipo de dato)
+*/
+console.log("Prueba de comparación 3:");
+if(numero3 === numero5)
+    console.log(`Se han comparado los valores de numero3 y numero5, confirmando que tienen el mismo valor.`)
+ else 
+    console.log(`Se han comparado los valores de numero3 y numero5, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 4: ¿Es 2 = "2.0"?
+console.log("Prueba de comparación 4:");
+if(numero3 == numero6)
+    console.log(`Se han comparado los valores de numero3 y numero6, confirmando que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores d enumero1 y numero4, detectando que NO tienen el mimso valor.`)
+
+    
+// Prueba de comparación 5: ¿Es 2 estrictamente = "2.0"?
+console.log("Prueba de comparación 5:");
+if(numero3 === numero6)
+    console.log(`Se han comparado los valores de numero3 y numero6, confirmando que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores d enumero1 y numero6, detectando que NO tienen el mimso valor.`)
+
+// Prueba de comparación 6: ¿Es 2 = Symbol(2)? 
+console.log("Prueba de comparación 6")
+if (numero1 == numero7)
+    console.log(`Se han comparado los valores de numero1 y numero7, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero7, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 7: ¿Es 2 estrictamente = Symbol(2)? 
+console.log("Prueba de comparación 7")
+if (numero1 === numero7)
+    console.log(`Se han comparado los valores de numero1 y numero7, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero7, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 8: ¿Es Symbol(2) = Symbol(2)? 
+console.log("Prueba de comparación 8: ¿Es Symbol(2) = Symbol(2)?")
+if (numero1 == numero10)
+    console.log(`Se han comparado los valores de numero1 y numero10, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero10, detectando que NO tienen el mismo valor.`)
+
+// Prueba de comparación 9: ¿Es Symbol(2) = Symbol(2)? 
+console.log("Prueba de comparación 8: ¿Es Symbol(2) estrictamente = Symbol(2)?")
+if (numero1 === numero10)
+    console.log(`Se han comparado los valores de numero1 y numero10, confirmado que tienen el mismo valor.`)
+else 
+    console.log(`Se han comparado los valores de numero1 y numero10, detectando que NO tienen el mismo valor.`)
+// 7. Null
+console.warn("-----tipo de dato nulo -nulo (nulo o vacio)")
+
+let perfilUsuario=null;
+let passUsuario=null;
+let generoUsuario=null;
+let estatusRelacionSentimental=null;
+let fecha_ultimopost;
+
+nombreUsuario="marco.ramirez@gmail.com";
+passUsuario="pass123";
 
 
- // dato bigint
-
-
- //const numeroGrande= BigInt(10000000001115155)
- //console.log(typeof numeroGrande )
- //const numero = 10
- //const numero2= 20
- //console.log (numero + Number(numeroGrande))
-
-
-
-//const numero = "30"
-//const numero2 = 30
-//console.log(typeofstring(numero2))
-//console.log(typeof Numbernumero)
-
-// symbol
-
-
-//const primerSymbol = Symbol(30)
-//const segundoSymbol = Symbol(30)
-//console.log(primerSymbol===segundoSymbol)
-//console.log(primerSymbol.valueOf())
-
-  //ejercicio4
-
-//null
-const descuento=null
- console.log(typeof descuento)
+console.log(`el usuario :${nombreUsuario}esta intentando logear con una contraseña de ${passUsuario}`)
