@@ -216,3 +216,33 @@ passUsuario="pass123";
 
 
 console.log(`el usuario :${nombreUsuario}esta intentando logear con una contraseña de ${passUsuario}`)
+// Lo que prosigue es que el sistema contejara los datos ingresados con la base de datos y en caso de que los datos sean correctos comenzará la sesión en la plataforma actualizando estos valores.
+
+// Dado que Marco es del genero Másculino, y denota que su estatus de relación no ha sido capturado o lo mantiene privado esto generar la actualización de los valores de las variables
+generoUsuario = "M";
+estatusRelacionSentimental = null
+
+console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener accesoa  su información de perfil podemos deducir que es del género ${generoUsuario} y que su estatus de relación es ${estatusRelacionSentimental} y su última publicación la realizó el: ${fecha_ultimopost}`)
+
+//comporando nulll vs undefined
+//undefined y null tienen el mismo valor ,no tienen el m ismo tipo de dato
+console.log("comparacion de la equidad entre undefined y null:");
+(fecha_ultimopost == estatusRelacionSentimental) ?
+console.log("ambas variables tienen el  mismo valor"):
+console.log("las variables no tienen el mismo valor");
+
+console.log("comparacion de la equidad entre undefined y null:");
+(fecha_ultimopost === estatusRelacionSentimental) ?
+console.log("ambas variables tienen el  mismo valor y el mismo dato"):
+console.log("las variables  tienen el mismo valor,pero no el mismo dato");
+
+//8 Fuction (funciones)
+
+
+console.warn("--- tipo de dato Function (funcion)")
+//Declaramos una funcion que nos permita recibir un parametro en este caso el  nombre de la persona a saludar , y le enviamos un saludo a esta funcion la asignamos a una constaante
+const saludar =function(nombre){return `Hola , ${nombre}!`}
+//invocamos a la funcion declarada 
+console.log(saludar('marco'));
+//y que tipo de dato tiene esta constante
+console.log(`el tipo de dato saludar es ${typeof(saludar)}`)
