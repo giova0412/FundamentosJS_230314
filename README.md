@@ -9,11 +9,11 @@ basicos de logica de programacion.
 
 |No.|Descripcion|Estatus|potenciadores|
 |--|--|--|--|
-|1.|Metodologia de Evaluacion|Activa|1|
-|2.|Inicializacion de proyecto de fundamentos de JS|Activa|5|
-|3.|Declaracion de variables (undefined,boolean,number,symbol) |Activa|10|
-|4.|Declaracion de variables (string,Bigint,null)|Activa|6|
-|5.|Introduccion a Objetos|Activa||
+|1.|Metodologia de Evaluacion|finalizado|1|
+|2.|Inicializacion de proyecto de fundamentos de JS|finalizado|5|
+|3.|Declaracion de variables (undefined,boolean,number,symbol) |finalizado|10|
+|4.|Declaracion de variables (string,Bigint,null)|finalizado|6|
+|5.|Introduccion a Objetos|finalizado||
 
 
 ### Autor
