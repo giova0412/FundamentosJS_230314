@@ -4,11 +4,11 @@
 
 
 const producto1 = {
-    nombre: "tablet 9\"",
-    marca:"mac",
-    modelo:"ipad",
-    costo_compra:11500.25,
-    costo_venta:15400,
+    Nombre: "tablet 9\"",
+    Marca:"mac",
+    Modelo:"ipad",
+    Costo_Compra:11500.25,
+    Costo_Venta:15400,
     disponible:true,
     SKU:Symbol("12345"),
     colores: ["blanco","negro","rosa","azul","amarillo"]
@@ -20,8 +20,141 @@ const producto1 = {
  console.table(producto1)
 
 //acceder a las propiedades de un objeto
-console.warn("leyendo las propiedades de un objeto y sus tipos de datos ")
-console.log(`nombre del producto ${producto1.nombre}, que es del tipo:${typeof}`)
+//Imprimir el objeto
+console.warn("---Objetos---")
+console.log(producto1);
+//Los objetos tambien ya pueden representarse en formato de tabla utilizando la funcion console.log.table
+console.table(producto1);
+//Acceder a las propiedades de un objeto
+console.warn("---Leyendo las Propiedades de un Objeto y sus tipos de dato")
+console.log(`Nombre del producto${producto1.Nombre} que es del tipo de dato ${typeof(producto1.Nombre)}`);
+console.log(`Nombre de la marca es ${producto1.Marca} que es del tipo de dato ${typeof(producto1.Marca)}`);
+console.log(`El modelo del producto es${producto1.Modelo} que es del tipo de dato ${typeof(producto1.Modelo)}`);
+console.log(`El precio del producto es${producto1.Costo_Compra} que es del tipo de dato ${typeof(producto1.Costo_Compra)}`);
+console.log(`El costo del producto es${producto1.Costo_Compra} que es del tipo de dato ${typeof(producto1.Costo_Venta)}`);
+
+//practica 5 02
+const bg = "linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 86%)";
+const style_console = `background: ${bg}; color: white; border-radius: 6px; padding: 4px; font-size: 1.0rem; font-weight: bold`
+
+//Personalización de las Salidas a Consola
+console.warn("Practica 05: Repaso de Objetos en Java Script");
+
+
+//VARIABLES INDEPENDIENTES
+console.log("%c1.- Variables Independientes", style_console);
+
+// Declaramos valores independientes relacionadas a un PRODUCTO
+
+let Producto_Nombre = "laptop gamer dell\"";
+let Producto_Marca= "dell"
+let Producto_Modelo= "cua 18"
+let Producto_Precio= 20310.50;
+let Producto_Disponibilidad= true;
+let Producto_SKU= Symbol("TUF707VV-GHKOJKO09") 
+let Producto_Stock = 20;
+let Producto_Imagen= null;
+let Producto_Barcode;
+let Producto_Categorias= ["Electrónicos", "Mejor Valorados"];
+
+
+
+console.log(`Los datos del PRODUCTO son: \n
+    Nombre: ${Producto_Nombre}, Tipo de Dato <${typeof(Producto_Nombre)}>
+    Marca:  ${Producto_Marca}, Tipo de Dato <${typeof(Producto_Marca)}>
+    Modelo: ${Producto_Modelo}, Tipo de Dato <${typeof(Producto_Modelo)}>
+    Precio: ${Producto_Precio}, Tipo de Dato <${typeof(Producto_Precio)}>
+    Disnponibidad: ${Producto_Disponibilidad}, Tipo de Dato <${typeof(Producto_Disponibilidad)}>
+    Stock: ${Producto_Stock}, Tipo de Dato <${typeof(Producto_Stock)}>
+    Barcode: ${Producto_Barcode}, Tipo de Dato <${typeof(Producto_Barcode)}>
+    Imagen: ${Producto_Imagen}, Tipo de Dato <${typeof(Producto_Imagen)}>
+    Cateforias: ${Producto_Categorias}, Tipo de Dato <${typeof(Producto_Categorias)}>`);
+    console.log("En el caso del SKU al ser un Symbol, no se puede concatenar a la cadena de impresión anterior");
+    console.log(Producto_SKU);
+    console.log(typeof(Producto_SKU));
+     //ahora lo declaramos com un objeto
+ 
+    let Producto =
+    {
+        Nombre: "iphone 13",
+        Marca:"iphone",
+        Modelo:"iphone",
+        precio:10000.25,
+        disponibilidad:false,
+        SKU:"d07890lkpl" ,
+        Imagen: "../ASSETS/iphone.jpg",
+        barcode:null,
+        categorias:["tecnologia"]
+    }
+    console.table(Producto)
+    console.log("Accediendo a propiedades especificas del producto")
+    console.log(`Nombre completo del producto ${Producto.Nombre}${Producto.Marca}${Producto.Modelo}`);
+    console.log(`Precio: ${Producto.Precio}`)
+
+   if(Producto.Disponibilidad == 0)
+   console.log(`Estatus: Agotado`)
+   else
+   console.log(`Estatus: ${Producto.Stock} unidades disponibles.`)
+
+  console.log("%c3.- Destructuración de Objetos", style_console);
+
+ let Producto2=
+ {
+    Clave: 316,
+    Nombre: "Lentes de vista",
+    Marca: "rayban",
+    Modelo: "originals",
+    Precio2: 7010.00,
+    Disponibilidad: true,
+    Stock: 2,
+    SKU: "009481D-0356",
+    Imagen: "../assets/lentes rayban.jpg",
+    Barcode: 888392491626 ,
+    Categorias: [ "Lentes", "salud", "Accesorios"]
+}
+let Comprador={
+    Clave: 3253,
+    Nombre: "giovany",
+    Apellidos: "pazos",
+    Tipo: "mexa",
+    Correo: "pazos@gmail.com",
+    PaisOrigen: "México",
+    SaldoActual: 1.100000
+}
+
+let Pedido={
+    Producto_Id: 350,
+    Comprador_clave: 3216,
+    Cantidad: 4,
+    Estatus: "Carrito de compra",
+    TipoPago: "Tarjeta de Crédito"
+}
+// En base  a los 3 objetos necesitamos calcular el costo de la compra y si le alcanza con sus saldo a favor
+
+let {Precio: Producto_Precio2 } = Producto2; 
+let {Cantidad:Pedido_Cantidad} = Pedido;
+let {SaldoActual: Cliente_SaldoActual} = Comprador;
+let Costo_Compra= Producto_Precio * Pedido_Cantidad;
+
+console.log(`El cliente ha agregado a su carrito de compras ${Pedido_Cantidad} undidades, con un costo total de: $${Costo_Compra}`);
+if(Costo_Compra< Cliente_SaldoActual)
+    console.log("El cliente tiene saldo suficiente.");
+
+//Actualizar el valor de los objetos
+console.log("%c4.- Actualización de los valores de las propiedades de un objeto", style_console);
+
+console.log(`El objeto tiene los siguientes valores:`)
+console.log(JSON.stringify(Producto2,null,2));
+//convierte el objeto a una cadena para evitar problemas con la referencia
+console.log(`Por cuestiones de inflación el costo del producto ha cambiado y debe ser actualizado... de $78200 a $80000`)
+
+//Para modificar el valor de un objeto basta con igualar el nuevo valor de la propiedad
+Producto2.Precio=6915.50;
+console.log(`Los nuevos valores del Producto son:`)
+console.log(Producto2);
+
+
+
 
 
  //const { nombre2 , precio2 , disponible2 }=producto1
