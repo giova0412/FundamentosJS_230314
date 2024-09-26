@@ -293,10 +293,22 @@ console.table(Venta2);
 
 
 //vamos a verificar el estatus de mutabilidad de objetos
-console.log("")
-console.log(``)
-console.log(``)
+console.log("vamos a verificar  el estatus de la mutabilidad del objeto pedido")
+console.log(`esta el objeto congelado ?${Object.isFrozen(Pedido)}`);
+console.log(`esta el objeto pedido sellado?${Object.isSealed(Pedido)}`);
 
+console.log("vamos a verificar  el estatus de la mutabilidad del objeto comprador")
+console.log(`esta el objeto congelado ?${Object.isFrozen(Comprador)}`);
+console.log(`esta el objeto pedido sellado?${Object.isSealed(Comprador)}`);
+
+console.log("vamos a verificar  el estatus de la mutabilidad del producto ")
+console.log(`esta el objeto congelado ?${Object.isFrozen(Producto)}`);
+console.log(`esta el objeto pedido sellado?${Object.isSealed(Producto)}`);
+
+//p
+Producto[`isLegacy`]=false;
+console.log(Producto)
+console.log(Venta);
 
 //
 const autenticado=true 
