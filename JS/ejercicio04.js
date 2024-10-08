@@ -134,8 +134,8 @@ console.table(arregloMixto)
 
 console.log("%c6.- Agregar un nuevo elemento a un arreglo (UNSHIFT) en la posición inicial",style_console)
 console.table(estudiantes)
-console.log("Ahora agregamos a Raúl Pasos, al comienzo del arreglo.")
-arregloMixto.unshift("Raúl Pasos")
+console.log("Ahora agregamos a Raúl Pazos, al comienzo del arreglo.")
+arregloMixto.unshift("Raúl Pazos")
 console.log("La lista atual es:")
 console.table(estudiantes)
 
@@ -152,7 +152,7 @@ console.table(estudiantes)
 console.log("%c8.- Eliminar el elemento de un arreglo en la primera posición (SHIFT)",style_console)
 console.log("El arreglo tiene los siguientes elementos:")
 console.table(estudiantes)
-console.log("Para este caso eliminaremos a Raúl Pasos, en la primera posición.")
+console.log("Para este caso eliminaremos a Raúl Pazos, en la primera posición.")
 estudiantes.shift();
 console.log("Después de eliminar el elemento del arreglo quedo de la siguiente manera: ")
 console.table(estudiantes);
@@ -161,3 +161,83 @@ console.table(estudiantes);
 console.log("%c9.- Modificar un arreglo en un arreglo nuevo con posiciones definidas (SPLICE)", style_console)
 console.log("El arreglo original tiene los elementos:")
 console.table(estudiantes);
+console.log("Dividir el arreglo en uno nuevo eliminado ciertos elementos en su base a su posicion")
+
+estudiantes.splice(2)
+console.table(estudiantes)
+
+estudiantes.push("jesus arteaga")
+estudiantes.push("dulce yadira")
+estudiantes.push("edwin campos")
+estudiantes.push("adrian marcelo")
+estudiantes.push("citali")
+console.log("ahora ya tenemos los elementos suficientes para aplicar el metodo splice con dos parametros que seran 3,5")
+estudiantes.splice(3,5)
+console.log("resultado en:")
+console.table(estudiantes)
+
+console.log("ahora vamos a insertar a \" mauricio rosales\ en los elementos de la posicion 0 y 1")
+estudiantes.splice(1,0,"mauricio rosales")
+console.log("resultado en :")
+console.table(estudiantes)
+//tambien sirven splice sirve para remplazar elemntos por otros ,en este caso reemplazar a "ppeyo"
+console.log("ahora vamos a insertar a \"mauricio\" en los elementos de la posicion \"ppeyo\"" )
+estudiantes.splice(0,1,"ppeyo")
+console.log("resultado en :")
+console.table(estudiantes)
+
+console.log("%c10.- Metodos para la manipulacion de arreglos inmutables" , style_console);
+let signosZodiacales=["aries","tauro","geminis","cancer","leo",
+    "virgo","libra","escorpio","sagitario","capricornio","acuario",
+"piscis"]
+//congelamos
+Object.freeze(signosZodiacales);
+/*signosZodiacales.push("Ofiuco");
+signosZodiacales.unshift();
+signosZodiacales.splice(6,2);*/
+let[signo1,,signo3,,,,signo7,,,,,]=signosZodiacales;
+console.log(`el primer signo zodiacal es:${signo1}`)
+console.log(`el primer signo zodiacal es:${signo3}`)
+console.log(`el primer signo zodiacal es:${signo7}`)
+
+console.log("%c11.-  filtrando  el elemento dentro de un arreglo utilizando el FILTER" , style_console);
+estudiantes.push("paco garcia");
+estudiantes.push("michelle otero");
+estudiantes.push("diego rivera");
+estudiantes.push("jennifer rivera");
+estudiantes.push("citalli garcia");
+estudiantes.push("brisa dominguez");
+console.table(estudiantes);
+
+Object.freeze(estudiantes);
+
+console.log("filtrando los 5 primeros elementos ");
+let nuevoEstudiantes=estudiantes.filter((estudiantes,index)=>index<5);
+console.table(nuevoEstudiantes);
+console.table(filtrarprimeros5(estudiantes));
+
+let nuevoEstudiantesNombre =estudiantes.filter((estudiantes)=>estudiante.length>15);
+console.table(nuevoEstudiantesNombre);
+
+nuevoEstudiantes.unshift("sayurid lopez neri");
+console.table(nuevoEstudiantes);
+
+function filtrarprimeros5(arregloEstudiantes){
+    let listaFiltrada=[]
+    for(let i=0;i<5;i++)
+    {
+        listaFiltrada.push(arregloEstudiantes[i]);
+    }
+    return listaFiltrada;
+}
+
+console.log("%c12.- Filtrado de Elementos dentro de un arreglo utilizando el metodo MAP, en el que necesitaremos transformarlos", style_console);
+console.log("Imprimimos los elementos actuales de signos zodiacales")
+console.table(signosZodiacales)
+
+console.table(signosZodiacales.map(signoZodiacal=>signoZodiacal.toUpperCase())); 
+const costosListasCompras= [15,52.50,16.90,32.50,28,105,45.2,94.10]
+console.log("Los precios son:")
+console.table(costosListasCompras)
+
+console.log(`El total de la compra es:${costosListasCompras.reduce((total,precio)=>total+precio,0).toFixed(2)}`)
