@@ -130,5 +130,5 @@ switch(true)
 }
 
 }
-
+//esto hace que se comente
 console.log(`Dado que nacio en el año 2005 soy de la generacion: ${asignaGeneracion(2005)}`);
