@@ -13,8 +13,8 @@ basicos de logica de programacion.
 |2.|Inicializacion de proyecto de fundamentos de JS|finalizado|5|
 |3.|Declaracion de variables (undefined,boolean,number,symbol) |finalizado|10|
 |4.|Declaracion de variables (string,Bigint,null)|finalizado|6|
-|5.|Introduccion a Objetos|finalizado||
-
+|5.|Introduccion a Objetos|finalizado|18|
+|6.|repaso de arreglos(arrays)|pendiente|18|
 
 ### Autor
 Giovany Raul Pazos Cruz
