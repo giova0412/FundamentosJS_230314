@@ -132,3 +132,189 @@ switch(true)
 }
 //esto hace que se comente y tambien
 console.log(`Dado que nacio en el año 2005 soy de la generacion: ${asignaGeneracion(2005)}`);
+
+console.log("%c4.- MANEJO DE EXCEPCIONES (try / catch))" ,style_console);
+
+console.log("inettamos dividir :0/10, el resultado es:");
+try{
+    let result=0/10;
+    console.log(result);
+}catch(error){
+    console.log("ocurrio un error"+error.message);
+}
+console.log("intentamos dividir :10/0 , el resultado es:");
+try{
+let result=10/0;
+console.log(result);
+}catch (error){
+    console.log("ocurrio un error:"+error.message);
+}
+
+console.log("inettamos dividir : la variable a/0, el resultado es:");
+try{
+    let result=a/0;
+    console.log(result);
+}catch(error){
+    console.log("ocurrio un error"+error.message);
+}
+
+console.log("inettamos dividir el valor de la variable x / entre el valor de y ,el resultado es");
+try{
+    let x=8, y=2, result=x/y;
+    console.log(result);
+}catch(error){
+    console.log("ocurrio un error"+error.message);
+}
+console.log("%c5.- control de ciclos  (break / continue))" ,style_console);
+
+console.log("vamos a contar del 1 al 10...-")
+for (let num=1; num<=10; num++)
+    console.log(num);
+
+console.log ("ahora necesitamos que si llegas al 7 pares de contar ... suponiendo que solo por hoy es de ma la suerte")
+for (num=1; num<=10; num++)
+    if(num==7)
+        break;
+    else
+    console.log(num);
+console.log("ahora necesitamos que si llegas al 7 te saltes ese numero y continues ")
+for (num=1 ; num<=10; num++)
+{
+    if(num==7)
+    {
+        continue;
+    }
+    console.log(num);
+}
+console.log("%c6.- ciclo iterativo- (for)" ,style_console);
+console.log("los dias de la semana son en orden ascendente son:")
+let dias =["domingo", "lunes","martes","miercoles","jueves","viernes","sabado"]
+for (let i=0; i<dias.length;i++)
+    console.log(dias[i])
+
+console.log("ahora vamos a imprimir los meses en orden descendente...")
+const meses=["enero","febero","marzo","abril","mayo","junio","julio","agosto","septiembre","obtubre","noviembre","diciembre",]
+for(let i=11; i>=0; i--)
+    console.log(meses[i]);
+
+
+let finDEsemana=false;
+let j=0;
+let mensaje="";
+
+while(j<dias.length){
+    switch(j)
+    {
+        case 0:
+            finDEsemana=true
+            mensaje="Domingo Perezozo"
+            break;
+        case 1:
+          finDEsemana=true
+          mensaje="lunes de hueva"
+          break; 
+        case 2:
+         finDEsemana=true
+         mensaje="martes de frio"
+         break;
+         case 3:
+         finDEsemana=true
+         mensaje="miercolitros"
+         break; 
+
+         case 4:
+         finDEsemana=true
+         mensaje="juebebes"
+         break;
+
+         case 5:
+        finDEsemana=true
+         mensaje="beviernes"
+         break; 
+
+         case 6:
+        finDEsemana=true
+         mensaje="sabadrink"
+        break;  
+
+         
+    }
+    if(finDEsemana){
+        console.log(`dia:${j} ${dias[j]}`)
+        console.log(`Mensaje del dia ${mensaje}`)
+    }
+    j++;
+}
+console.log("%c8.- ciclo condicionales- que se ejecutan al menos una vez-(do while)" ,style_console);
+let episodios=[
+    "cap1:Camelot (Camelot)",
+    "cap2:El sistema de plazas",
+    "cap3:El Padrino",
+    "cap4:¡Rafa, Rafa, Rafa!",
+    "cap5:La conexión colombiana"
+];
+let indice=0;
+let continuadorViendo=true;
+do{
+    console.log(`reproduciendo ${episodios[indice]}`);
+    indice++;
+    if(indice<episodios.length){
+        continuadorViendo=confirm("deseas continuar con el siguiente cap?");
+    }else{
+        continuadorViendo=false;
+    }
+
+}while(continuadorViendo && indice<episodios.length);
+
+console.log("Fin de la reproduccion");
+
+console.log("%c9.- ciclo condicionales- que se ejecutan al menos una vez-(do while)" ,style_console);
+let seriesTrending=[
+    {nombre: "digimon tamers",temporadas:1,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "digimon true",temporadas:2,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "digimon xro wars",temporadas:1,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "pokemon xy",temporadas:5,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "lost canvas",temporadas:1,totalviews:"3.0M",tOtalReprods:"60M"}
+];
+for(let serie of seriesTrending){
+    console.log(`series :${serie.nombre},temporadas:${serie.temporadas}`);
+}
+console.log("%c10.- ciclos para recorrer las propiedades de elementos finitos (for...in)" ,style_console);
+for(let i in seriesTrending){
+    console.log(`Serie${parseInt(i)+1}:`);
+    for(let propiedad in seriesTrending[i]){
+        console.log(`${propiedad}:${seriesTrending[i][propiedad]}`);
+    }
+    console.log(`--------------`)
+}
+
+console.log("%c11.- ciclos interrumpidos para cada uno de los  elemenetos del arreglo(FOR EACH)" ,style_console);
+let seriesTrending2=[
+    {nombre: "One piece ",temporadas:10,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "death note",temporadas:3,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "lost canvas",temporadas:2,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "bleach",temporadas:12,totalviews:"3.0M",tOtalReprods:"60M"},
+    {nombre: "el chapo",temporadas:1,totalviews:"3.0M",tOtalReprods:"60M"}
+];
+seriesTrending2.forEach((serie,index)=>{
+    let calificación = (serie.t0talReprods/serie.totalviews).toFixed(2);
+    //Calcula la calificación y la redondea a 2 a decimales
+    console.log(`Serie ${index+1}:`);
+    console.log(`Nombre ${serie.nombre}:`);
+    console.log(`Vistas ${serie.totalviews}:`)
+    console.log(`Reproduciones ${serie.to}:`)
+    console.log(`Calificacion ${calificación}:`)
+    console.log(`---------------------`)
+  }
+  )
+  
+  let seriesDeseadas = ["lost canvas","bleach","One piece"];
+  
+  let seriesConTresTemporadas = seriesTrending2
+      .filter(serie=> serie.temporadas <=3)//Filatramos las series que teienen 3 temporadas
+      .map(serie=> serie.nombre)//Obtenemos solo los nombres de esas series estan en la lista de series deseadas
+      .filter(nombre=> seriesDeseadas.includes(nombre));//Filtramos las que estan en la lista de series deseadas
+  
+  //Mostramos los resultados
+  console.log("Series con 3 temporadas que estan en la lista deseada: ")
+  console.log(seriesConTresTemporadas);
