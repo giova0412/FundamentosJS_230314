@@ -216,7 +216,7 @@ let nuevoEstudiantes=estudiantes.filter((estudiantes,index)=>index<5);
 console.table(nuevoEstudiantes);
 console.table(filtrarprimeros5(estudiantes));
 
-let nuevoEstudiantesNombre =estudiantes.filter((estudiantes)=>estudiante.length>15);
+let nuevoEstudiantesNombre =estudiantes.filter((estudiantes)=>estudiantes.length>15);
 console.table(nuevoEstudiantesNombre);
 
 nuevoEstudiantes.unshift("sayurid lopez neri");
