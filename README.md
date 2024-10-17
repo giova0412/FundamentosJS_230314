@@ -15,7 +15,7 @@ basicos de logica de programacion.
 |4.|Declaracion de variables (string,Bigint,null)|finalizado|6|
 |5.|Introduccion a Objetos|finalizado|18|
 |6.|repaso de arreglos(arrays)|finalizado|18|
-|7.|Sentencias de control|pendiente|16|
+|7.|Sentencias de control|finalizada|16|
 ### Autor
 Giovany Raul Pazos Cruz
 unidad 1 
